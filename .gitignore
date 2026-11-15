@@ -1,0 +1,32 @@
+# .NET
+**/bin/
+**/obj/
+.vs/
+
+# Python
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+
+# Node
+node_modules/
+dist/
+
+# Local configurations
+.env
+.env.*
+!.env.example
+appsettings.Development.json
+
+# Database and student datasets
+datasets/private/
+*.db
+*.bak
+
+# Trained model artifacts
+ml-service/artifacts/
+
+# IDE
+.idea/
+.vscode/

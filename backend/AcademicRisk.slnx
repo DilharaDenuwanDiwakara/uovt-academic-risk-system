@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/AcademicRisk.Api/AcademicRisk.Api.csproj" />
+    <Project Path="src/AcademicRisk.Application/AcademicRisk.Application.csproj" />
+    <Project Path="src/AcademicRisk.Domain/AcademicRisk.Domain.csproj" />
+    <Project Path="src/AcademicRisk.Infrastructure/AcademicRisk.Infrastructure.csproj" />
+  </Folder>
+</Solution>
