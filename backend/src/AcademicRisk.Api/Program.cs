@@ -1,4 +1,6 @@
 using AcademicRisk.Infrastructure;
+using AcademicRisk.Infrastructure.Persistence;
+using AcademicRisk.Infrastructure.Persistence.Seed;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +17,17 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+}
+
+if (app.Environment.IsDevelopment() &&
+    app.Configuration.GetValue<bool>("SeedData:Uovt2022Curriculum"))
+{
+    using var scope = app.Services.CreateScope();
+
+    var db = scope.ServiceProvider
+        .GetRequiredService<AcademicRiskDbContext>();
+
+    await Uovt2022CurriculumSeeder.SeedAsync(db);
 }
 
 app.UseHttpsRedirection();
