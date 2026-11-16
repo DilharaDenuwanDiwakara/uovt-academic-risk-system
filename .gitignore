@@ -21,6 +21,8 @@ appsettings.Development.json
 
 # Database and student datasets
 datasets/private/
+datasets/raw/
+datasets/processed/
 *.db
 *.bak
 
